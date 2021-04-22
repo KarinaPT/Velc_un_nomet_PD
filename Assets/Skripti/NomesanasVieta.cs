@@ -68,6 +68,41 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[3]);
                         break;
 
+                        case "Lielamaja":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[4]);
+                            break;
+
+                        case "lielamaja2":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[5]);
+                            break;
+
+                        case "Maja":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[6]);
+                            break;
+
+                        case "pils":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[7]);
+                            break;
+
+                        case "laiva":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[8]);
+                            break;
+
+                        case "Dzeltenstrissturis":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[9]);
+                            break;
+
+                        case "4malas":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[10]);
+                            break;
+
+                        case "tvaikonis":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[11]);
+                            break;
+
+            
+
+
                         default:
                             Debug.Log("Nedefinēts tags!");
                         break;
@@ -97,6 +132,47 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
                         objektuSkripts.autobuss.GetComponent<RectTransform>().localPosition =
                             objektuSkripts.bussKoord;
                         break;
+
+                    case "Lielamaja":
+                        objektuSkripts.traktors1.GetComponent<RectTransform>().localPosition =
+                             objektuSkripts.traktors1Koord;
+                        break;
+
+                    case "lielamaja2":
+                        objektuSkripts.traktors5.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.traktors5Koord;
+                        break;
+
+                    case "Maja":
+                        objektuSkripts.ugunsdzeseji.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.ugunsdzesejiKoord;
+                        break;
+
+                    case "pils":
+                        objektuSkripts.camantamasina.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.camantamasinaKoord;
+                        break;
+
+                    case "laiva":
+                        objektuSkripts.b2.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.b2Koord;
+                        break;
+
+                    case "Dzeltenstrissturis":
+                        objektuSkripts.e46.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.e46Koord;
+                        break;
+
+                    case "4malas":
+                        objektuSkripts.policija.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.policijaKoord;
+                        break;
+
+                    case "tvaikonis":
+                        objektuSkripts.ekskavators.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.ekskavatorsKoord;
+                        break;
+
 
                     default:
                         Debug.Log("Objektam nav noteikta pārvietošanas vieta!");

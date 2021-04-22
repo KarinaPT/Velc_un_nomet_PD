@@ -7,6 +7,16 @@ TagManager:
   - Atkritumi
   - Atrie
   - Skola
+  - Lielamaja
+  - Jura
+  - AugsejaisTilts
+  - Maja
+  - laiva
+  - pils
+  - Dzeltenstrissturis
+  - tvaikonis
+  - 4malas
+  - lielamaja2
   layers:
   - Default
   - TransparentFX
