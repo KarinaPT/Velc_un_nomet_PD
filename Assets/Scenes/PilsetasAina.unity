@@ -2552,10 +2552,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6c4229a04ab10754ba72e378560c196a, type: 3}
   - {fileID: 8300000, guid: 2aa9e3c1ada5c1b41b77d56a64a0c71c, type: 3}
   - {fileID: 8300000, guid: d5b5a0b2d74dd5a43a733b8e1c270319, type: 3}
+  - {fileID: 8300000, guid: a3e68502a2476534695239ef8a9a2d7a, type: 3}
   - {fileID: 8300000, guid: 4ea43ac9b2035af449934bfbf62e8163, type: 3}
   - {fileID: 8300000, guid: 14dac08fd30b0e544833a0b7a75f9967, type: 3}
-  - {fileID: 8300000, guid: a3e68502a2476534695239ef8a9a2d7a, type: 3}
-  - {fileID: 8300000, guid: a3e68502a2476534695239ef8a9a2d7a, type: 3}
+  - {fileID: 8300000, guid: e76bab44debb3b84b8f38fbf8589ba11, type: 3}
   pedejaisVilktais: {fileID: 0}
   vaiIstajaVieta: 0
 --- !u!4 &1903221569
