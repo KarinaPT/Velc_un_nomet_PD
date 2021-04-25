@@ -16,6 +16,10 @@ public class Objekti : MonoBehaviour
     public GameObject e46;
     public GameObject ekskavators;
     public GameObject policija;
+    //Definējam papildu mainīgo, lai veikt punktu skaitīšanu
+    public int punkti = 0;
+    //Definējam papildu GameOjektu, lai izvēlēties konkrēto paneli
+    public GameObject IzkritosaisLogs;
 
     /*Uzglabās velkamo objektu sākotnējās pozīcijas
     koordinātas (lai zinātu, kur aizmest objektu, ja tas nolikts nepareizajā vietā)*/

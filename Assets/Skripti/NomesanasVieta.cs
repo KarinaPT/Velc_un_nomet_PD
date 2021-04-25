@@ -4,7 +4,8 @@ using UnityEngine;
 //Jāimportē, lai varētu piesaistīt IDropHandler interfeisu un lietot OnDrop funkciju
 using UnityEngine.EventSystems;
 
-public class NomesanasVieta : MonoBehaviour, IDropHandler{
+public class NomesanasVieta : MonoBehaviour, IDropHandler
+{
     //Uzglabās velkamā objekta rotāciju ap Z asi un noliekamās vietas rotāciju
     //Starpība uzglabās, cik liela Z ass rotācijas leņķa starpība starp abiem objektiem
     private float vietasZrot, velkamaObjeZrot, rotacijasStarpiba;
@@ -14,12 +15,11 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
     private float xIzmeruStarpiba, yIzmeruStarpiba;
     //Norāde uz skriptu Objekti
     public Objekti objektuSkripts;
-
     //Nostradā, ja objektu cenšas nomest uz nometamā lauka
     public void OnDrop(PointerEventData notikums)
     {
         //Pārbauda vai kāds objekts tiek vilkts un nomests
-        if(notikums.pointerDrag != null)
+        if (notikums.pointerDrag != null)
         {
             //Ja nomešanas laukā uzmestā attēla tags sakrīt ar lauka tagu
             if ((notikums.pointerDrag.tag.Equals(tag)))
@@ -37,8 +37,8 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
 
                 //Pārbauda vai objektu savstarpējā rotācija neatšķiras vairāk par 9 grādiem
                 //un vai x un y izmēri neatšķiras vairāk par 0.15
-                if((rotacijasStarpiba <=9 || (rotacijasStarpiba >= 351 && rotacijasStarpiba <= 360))
-                    && (xIzmeruStarpiba <=0.15 && yIzmeruStarpiba <= 0.15))
+                if ((rotacijasStarpiba <= 9 || (rotacijasStarpiba >= 351 && rotacijasStarpiba <= 360))
+                    && (xIzmeruStarpiba <= 0.15 && yIzmeruStarpiba <= 0.15))
                 {
                     objektuSkripts.vaiIstajaVieta = true;
                     //Nometamo objektu iecentrē nomešanas vietā
@@ -54,62 +54,65 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
 
                     /*Pārbauda pēc tagiem, kurš no objektiem ir pareizi nomests, tad 
                     atskaņo atbilstošo skaņu*/
+
+
                     switch (notikums.pointerDrag.tag)
                     {
                         case "Atkritumi":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[1]);
-                        break;
-
+                            objektuSkripts.punkti += 1;
+                            break;
                         case "Atrie":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[2]);
-                        break;
-
+                            objektuSkripts.punkti += 1;
+                            break;
                         case "Skola":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[3]);
-                        break;
-
+                            objektuSkripts.punkti += 1;
+                            break;
                         case "Lielamaja":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[4]);
+                            objektuSkripts.punkti += 1;
                             break;
-
                         case "lielamaja2":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[5]);
+                            objektuSkripts.punkti += 1;
                             break;
-
                         case "Maja":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[6]);
+                            objektuSkripts.punkti += 1;
                             break;
-
                         case "pils":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[7]);
+                            objektuSkripts.punkti += 1;
                             break;
-
                         case "laiva":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[8]);
+                            objektuSkripts.punkti += 1;
                             break;
-
                         case "Dzeltenstrissturis":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[9]);
+                            objektuSkripts.punkti += 1;
                             break;
-
                         case "4malas":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[10]);
+                            objektuSkripts.punkti += 1;
                             break;
-
                         case "tvaikonis":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[11]);
+                            objektuSkripts.punkti += 1;
                             break;
-
-            
-
 
                         default:
                             Debug.Log("Nedefinēts tags!");
-                        break;
+                            break;
                     }
                 }
-            //Ja objektu tagi neskarīt un nomet nepareizajā vietā
-            } else {
+
+                //Ja objektu tagi neskarīt un nomet nepareizajā vietā
+            }
+            else
+            {
                 objektuSkripts.vaiIstajaVieta = false;
                 //Atskaņo skaņu
                 objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[0]);
@@ -121,6 +124,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
                     case "Atkritumi":
                         objektuSkripts.atkritumuMasina.GetComponent<RectTransform>().localPosition =
                             objektuSkripts.atkrKoord;
+
                         break;
 
                     case "Atrie":
@@ -179,6 +183,9 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler{
                         break;
                 }
             }
+        }
+        if(objektuSkripts.punkti == 11){
+            objektuSkripts.IzkritosaisLogs.SetActive(true);
         }
     }
 }
