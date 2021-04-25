@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Izvelne.unity
+    guid: 5ab1940593aa2bb438af607c30f6b84b
+  - enabled: 1
     path: Assets/Scenes/PilsetasAina.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Izvele1.unity
-    guid: f44776e488549b04bac60c96842cb0d8
-  - enabled: 1
-    path: Assets/Scenes/Izvelne1.unity
-    guid: 32bcb0a44becf7d4a9bc3d1b3e2dd22a
   m_configObjects: {}
