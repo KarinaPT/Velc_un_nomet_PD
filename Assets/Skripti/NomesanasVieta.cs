@@ -60,6 +60,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                     {
                         case "Atkritumi":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAtskanot[1]);
+                            //Šī komanda, pēc katra pareiza mašīnas novietošanas punktiem pieskaita vienu vērtību
                             objektuSkripts.punkti += 1;
                             break;
                         case "Atrie":
@@ -184,6 +185,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                 }
             }
         }
+        //Kad punktu skaits sasniedz 11, tad programmā aktivizējas izktritošais logs
         if(objektuSkripts.punkti == 11){
             objektuSkripts.IzkritosaisLogs.SetActive(true);
         }
